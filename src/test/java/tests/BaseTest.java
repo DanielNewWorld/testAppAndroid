@@ -1,6 +1,5 @@
 package tests;
 
-import static junit.framework.TestCase.assertEquals;
 import static helper.Constans.SCREENSHOT_TO_SAVE_FOLDER;
 import static helper.DeviceHelper.executeBash;
 import static helper.RunHelper.runHelper;
@@ -9,18 +8,12 @@ import static io.qameta.allure.Allure.step;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.github.romankh3.image.comparison.ImageComparison;
-import com.github.romankh3.image.comparison.ImageComparisonUtil;
-import com.github.romankh3.image.comparison.model.ImageComparisonResult;
-import com.github.romankh3.image.comparison.model.ImageComparisonState;
 
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -29,11 +22,11 @@ import java.nio.file.StandardCopyOption;
 import config.ConfigReader;
 import io.qameta.allure.Allure;
 import io.qameta.allure.selenide.AllureSelenide;
-import lesteners.AllureListener;
+import listeners.AllureListener;
 
 @ExtendWith(AllureListener.class)
 public class BaseTest {
-    @BeforeClass
+    @BeforeAll
     public static void setup(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 

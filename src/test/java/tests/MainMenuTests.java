@@ -1,8 +1,7 @@
 package tests;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import io.qameta.allure.Description;
 import pages.MainPage;
@@ -10,7 +9,7 @@ import pages.MainPage;
 public class MainMenuTests extends BaseTest{
     private static MainPage mainPage;
 
-    @BeforeClass
+    @BeforeAll
     public static void init(){
         mainPage = new MainPage();
     }

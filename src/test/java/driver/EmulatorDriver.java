@@ -1,7 +1,5 @@
 package driver;
 
-import static junit.framework.TestCase.assertTrue;
-
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
 import config.ConfigReader;
